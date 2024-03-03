@@ -1,5 +1,7 @@
 package calculadora;
 
+import exepciones.FraccionNula;
+
 public class Calculadora {
 
 	private Calculadora() {
@@ -28,11 +30,12 @@ public class Calculadora {
 	public static Fraccion sumar(Fraccion fraccionUno, Fraccion fraccionDos) {
 
 		if (fraccionUno == null) {
-			throw new RuntimeException("La fraccion uno no puede estar vacia");
+			throw new FraccionNula();
 		}
+		
 
 		if (fraccionDos == null) {
-			throw new RuntimeException("La fraccion dos no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		long numerador = fraccionUno.getNumerador() * fraccionDos.getDenominador()
@@ -45,11 +48,11 @@ public class Calculadora {
 	public static Fraccion restar(Fraccion fraccionUno, Fraccion fraccionDos) {
 
 		if (fraccionUno == null) {
-			throw new RuntimeException("La fraccion uno no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		if (fraccionDos == null) {
-			throw new RuntimeException("La fraccion dos no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		long numerador = fraccionUno.getNumerador() * fraccionDos.getDenominador()
@@ -61,11 +64,11 @@ public class Calculadora {
 	public static Fraccion multiplicar(Fraccion fraccionUno, Fraccion fraccionDos) {
 
 		if (fraccionUno == null) {
-			throw new RuntimeException("La fraccion uno no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		if (fraccionDos == null) {
-			throw new RuntimeException("La fraccion dos no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		long numerador = fraccionUno.getNumerador() * fraccionDos.getNumerador();
@@ -76,11 +79,11 @@ public class Calculadora {
 	public static Fraccion dividir(Fraccion fraccionUno, Fraccion fraccionDos) {
 
 		if (fraccionUno == null) {
-			throw new RuntimeException("La fraccion uno no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		if (fraccionDos == null) {
-			throw new RuntimeException("La fraccion dos no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		long numerador = fraccionUno.getNumerador() * fraccionDos.getDenominador();
@@ -91,7 +94,7 @@ public class Calculadora {
 	public static Mixta fraccionAMixto(Fraccion fraccion) {
 
 		if (fraccion == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 		long numerador = fraccion.getNumerador();
 		long denominador = fraccion.getDenominador();
@@ -109,7 +112,7 @@ public class Calculadora {
 	public static Fraccion mixtoAFraccion(Mixta mixta) {
 
 		if (mixta == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		long numerador = (mixta.getEntero() * mixta.getDenominador()) + mixta.getNumerador();
@@ -122,11 +125,11 @@ public class Calculadora {
 	public static Mixta sumarMixta(Mixta mixtaUno, Mixta mixtaDos) {
 
 		if (mixtaUno == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		if (mixtaDos == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		Fraccion fraccionUno = mixtoAFraccion(mixtaUno);
@@ -144,11 +147,11 @@ public class Calculadora {
 	public static Mixta restarMixta(Mixta mixtaUno, Mixta mixtaDos) {
 
 		if (mixtaUno == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		if (mixtaDos == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		Fraccion fraccionUno = mixtoAFraccion(mixtaUno);
@@ -166,11 +169,11 @@ public class Calculadora {
 	public static Mixta multiplicarMixta(Mixta mixtaUno, Mixta mixtaDos) {
 
 		if (mixtaUno == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		if (mixtaDos == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		Fraccion fraccionUno = mixtoAFraccion(mixtaUno);
@@ -188,11 +191,11 @@ public class Calculadora {
 	public static Mixta dividirMixta(Mixta mixtaUno, Mixta mixtaDos) {
 
 		if (mixtaUno == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		if (mixtaDos == null) {
-			throw new RuntimeException("La fraccion no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		Fraccion fraccionUno = mixtoAFraccion(mixtaUno);
