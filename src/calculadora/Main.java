@@ -17,7 +17,7 @@ public class Main {
 		System.out.println(Calculadora.restarMixta(fraccionMixtaUno, fraccionMixtaDos).toString());
 		System.out.println(Calculadora.multiplicarMixta(fraccionMixtaUno, fraccionMixtaDos).toString());
 		System.out.println(Calculadora.dividirMixta(fraccionMixtaUno, fraccionMixtaDos).toString());
-		System.out.println(Calculadora.saberSiEsPropia(fraccionUno));
+//		System.out.println(Calculadora.saberSiEsPropia(fraccionUno));
 
 
 	}
