@@ -1,5 +1,6 @@
 package calculadora;
 
+import exepciones.DenominadorCero;
 
 public class Fraccion {
 	
@@ -30,7 +31,7 @@ public class Fraccion {
 	private void setDenominador(long denominador) {
 		this.denominador = denominador;
 		if (this.denominador == 0 ) {
-			throw new RuntimeException("No es posible tener un denominador igual a 0");
+			throw new DenominadorCero();
 			
 		}
 		this.denominador = denominador;

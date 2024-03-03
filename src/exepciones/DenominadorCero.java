@@ -3,11 +3,11 @@ package exepciones;
 import java.util.logging.Logger;
 
 @SuppressWarnings("serial")
-public class FraccionNula extends RuntimeException {
+public class DenominadorCero extends RuntimeException {
 	Logger logger = Logger.getLogger(getClass().getName());
 
-	public FraccionNula() {
-		logger.info("La Fraccion no puede estar vacia");
+	public DenominadorCero() {
+		logger.info("El denominador no puede ser cero");
 	}
 
 }
