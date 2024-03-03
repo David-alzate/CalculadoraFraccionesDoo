@@ -1,5 +1,7 @@
 package calculadora;
 
+import exepciones.FraccionNula;
+
 public class Calculadora {
 
 	private Calculadora() {
@@ -28,11 +30,12 @@ public class Calculadora {
 	public static Fraccion sumar(Fraccion fraccionUno, Fraccion fraccionDos) {
 
 		if (fraccionUno == null) {
-			throw new RuntimeException("La fraccion uno no puede estar vacia");
+			throw new FraccionNula();
 		}
+		
 
 		if (fraccionDos == null) {
-			throw new RuntimeException("La fraccion dos no puede estar vacia");
+			throw new FraccionNula();
 		}
 
 		long numerador = fraccionUno.getNumerador() * fraccionDos.getDenominador()
