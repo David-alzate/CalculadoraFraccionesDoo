@@ -2,7 +2,7 @@ package calculadora;
 
 public class Main {
 	public static void main(String[] args) {
-		Fraccion fraccionUno = Fraccion.crear(12, 5);
+		Fraccion fraccionUno = Fraccion.crear(12, 1);
 		Fraccion fraccionDos = Fraccion.crear(12, 6);
 		Mixta fraccionMixtaUno = Mixta.crear(2, 1, 4);
 		Mixta fraccionMixtaDos = Mixta.crear(4, 7, 4);

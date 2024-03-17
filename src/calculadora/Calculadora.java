@@ -19,6 +19,7 @@ public class Calculadora {
 	private static long calcularMCD(long l, long m) {
 		l = Math.abs(l);
 		m = Math.abs(m);
+		
 		while (m != 0) {
 			long temp = m;
 			m = l % m;
@@ -29,12 +30,11 @@ public class Calculadora {
 
 	public static Fraccion sumar(Fraccion fraccionUno, Fraccion fraccionDos) {
 
-		if (fraccionUno == null) {
+		if (UtilObjeto.esNull(fraccionUno)) {
 			throw new FraccionNula();
 		}
-		
 
-		if (fraccionDos == null) {
+		if (UtilObjeto.esNull(fraccionDos)) {
 			throw new FraccionNula();
 		}
 
@@ -47,11 +47,11 @@ public class Calculadora {
 
 	public static Fraccion restar(Fraccion fraccionUno, Fraccion fraccionDos) {
 
-		if (fraccionUno == null) {
+		if (UtilObjeto.esNull(fraccionUno)) {
 			throw new FraccionNula();
 		}
 
-		if (fraccionDos == null) {
+		if (UtilObjeto.esNull(fraccionDos)) {
 			throw new FraccionNula();
 		}
 
@@ -63,11 +63,11 @@ public class Calculadora {
 
 	public static Fraccion multiplicar(Fraccion fraccionUno, Fraccion fraccionDos) {
 
-		if (fraccionUno == null) {
+		if (UtilObjeto.esNull(fraccionUno)) {
 			throw new FraccionNula();
 		}
 
-		if (fraccionDos == null) {
+		if (UtilObjeto.esNull(fraccionDos)) {
 			throw new FraccionNula();
 		}
 
@@ -78,11 +78,11 @@ public class Calculadora {
 
 	public static Fraccion dividir(Fraccion fraccionUno, Fraccion fraccionDos) {
 
-		if (fraccionUno == null) {
+		if (UtilObjeto.esNull(fraccionUno)) {
 			throw new FraccionNula();
 		}
 
-		if (fraccionDos == null) {
+		if (UtilObjeto.esNull(fraccionDos)) {
 			throw new FraccionNula();
 		}
 
@@ -93,9 +93,10 @@ public class Calculadora {
 
 	public static Mixta fraccionAMixto(Fraccion fraccion) {
 
-		if (fraccion == null) {
+		if (UtilObjeto.esNull(fraccion)) {
 			throw new FraccionNula();
 		}
+		
 		long numerador = fraccion.getNumerador();
 		long denominador = fraccion.getDenominador();
 
@@ -111,7 +112,7 @@ public class Calculadora {
 
 	public static Fraccion mixtoAFraccion(Mixta mixta) {
 
-		if (mixta == null) {
+		if (UtilObjeto.esNull(mixta)) {
 			throw new FraccionNula();
 		}
 
@@ -124,11 +125,11 @@ public class Calculadora {
 
 	public static Mixta sumarMixta(Mixta mixtaUno, Mixta mixtaDos) {
 
-		if (mixtaUno == null) {
+		if (UtilObjeto.esNull(mixtaUno)) {
 			throw new FraccionNula();
 		}
-
-		if (mixtaDos == null) {
+		
+		if (UtilObjeto.esNull(mixtaDos)) {
 			throw new FraccionNula();
 		}
 
@@ -146,11 +147,11 @@ public class Calculadora {
 
 	public static Mixta restarMixta(Mixta mixtaUno, Mixta mixtaDos) {
 
-		if (mixtaUno == null) {
+		if (UtilObjeto.esNull(mixtaUno)) {
 			throw new FraccionNula();
 		}
-
-		if (mixtaDos == null) {
+		
+		if (UtilObjeto.esNull(mixtaDos)) {
 			throw new FraccionNula();
 		}
 
@@ -168,11 +169,11 @@ public class Calculadora {
 
 	public static Mixta multiplicarMixta(Mixta mixtaUno, Mixta mixtaDos) {
 
-		if (mixtaUno == null) {
+		if (UtilObjeto.esNull(mixtaUno)) {
 			throw new FraccionNula();
 		}
-
-		if (mixtaDos == null) {
+		
+		if (UtilObjeto.esNull(mixtaDos)) {
 			throw new FraccionNula();
 		}
 
@@ -190,11 +191,11 @@ public class Calculadora {
 
 	public static Mixta dividirMixta(Mixta mixtaUno, Mixta mixtaDos) {
 
-		if (mixtaUno == null) {
+		if (UtilObjeto.esNull(mixtaUno)) {
 			throw new FraccionNula();
 		}
-
-		if (mixtaDos == null) {
+		
+		if (UtilObjeto.esNull(mixtaDos)) {
 			throw new FraccionNula();
 		}
 
