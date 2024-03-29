@@ -30,17 +30,14 @@ public class Fraccion {
 
 	private void setDenominador(long denominador) {
 		this.denominador = denominador;
-		if (this.denominador == 0 ) {
+		if (this.denominador == 0) {
 			throw new DenominadorCero();
-			
 		}
-		this.denominador = denominador;
 	}
 
 	@Override
 	public String toString() {
 		return getNumerador() + " / " + getDenominador();
 	}
-	
-	
+
 }
